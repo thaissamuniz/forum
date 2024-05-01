@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { GoHeart, GoHeartFill } from "react-icons/go";
-import { RiMessage3Line, RiMessage3Fill } from "react-icons/ri";
-import { PiShareFatLight, PiShareFatFill } from "react-icons/pi";
+import { GoHeart } from "react-icons/go";
+import { RiMessage3Line } from "react-icons/ri";
+import { PiShareFatLight } from "react-icons/pi";
 import { MdOutlineEdit, MdDone } from "react-icons/md";
 import { useState } from 'react';
 
@@ -30,7 +30,7 @@ const ProfileName = styled.h3`
 const iconStyle = {
     width: '25px',
     height: '25px',
-    marginRight: '16px',
+    marginRight: '16px'
 };
 
 const SocialBtns = styled.div`
@@ -41,27 +41,26 @@ const editIconsStyle = { position: 'absolute', right: '20px' };
 
 
 
-const Post = ({ name, date, text }) => {
+const Post = () => {
     const [editMode, setEditMode] = useState(false);
-    const [like, setLike] = useState(false);
     const handleClick = () => setEditMode(!editMode);
     return (
         <PostContainer>
             <ProfileContent>
                 <ProfileImage src="https://cdn.pixabay.com/photo/2016/11/22/23/14/terrier-1851108_1280.jpg" alt="profile pic" />
                 <div>
-                    <ProfileName>{name}</ProfileName>
-                    <span>{date}</span>
+                    <ProfileName>LovePuppies</ProfileName>
+                    <span>3 de Janeiro de 2024</span>
                 </div>
                 <div onClick={handleClick}>
                     {
-                        editMode ? <MdDone style={editIconsStyle} /> : <MdOutlineEdit style={editIconsStyle} />
+                        editMode ? <MdDone style={editIconsStyle}/> : <MdOutlineEdit style={editIconsStyle} />
                     }
                 </div>
             </ProfileContent>
-            <p>{text}</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, voluptatem reprehenderit expedita consequatur sequi quos commodi tenetur dicta aliquid id ratione fuga voluptas maiores veritatis iste porro non assumenda consectetur. </p>
             <SocialBtns>
-                <span onClick={() => setLike(!like)}> {like ? <GoHeartFill style={iconStyle} /> : <GoHeart style={iconStyle} />}</span>
+                <span><GoHeart style={iconStyle} /></span>
                 <span><RiMessage3Line style={iconStyle} /></span>
                 <span><PiShareFatLight style={iconStyle} /></span>
             </SocialBtns>

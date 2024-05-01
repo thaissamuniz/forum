@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background: linear-gradient(to bottom right, #ffd6ff, #bbd0ff); */
+  background-color: #bbd0ff;
+  height: 100vh;
+  font-family: "Quicksand", sans-serif;
+}
